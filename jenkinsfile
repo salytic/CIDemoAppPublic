@@ -1,0 +1,25 @@
+import java.text.SimpleDateFormat
+
+pipeline {
+    agent none
+	
+    environment {
+		ENVIRONMENT = "qa"
+    }
+	
+    stages { 
+
+		stage('Build') {
+			agent any
+			
+			steps { 
+
+				echo 'terraform init now' 
+
+				script { 
+					echo 'develop'
+				}
+			}
+		}
+    }
+}

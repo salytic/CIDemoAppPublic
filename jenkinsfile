@@ -1,11 +1,5 @@
-import java.text.SimpleDateFormat
-
 pipeline {
     agent none
-	
-    environment {
-		ENVIRONMENT = "qa"
-    }
 	
     stages { 
 
@@ -13,12 +7,7 @@ pipeline {
 			agent any
 			
 			steps { 
-
 				echo 'terraform init now' 
-
-				script { 
-					echo 'develop'
-				}
 			}
 		}
     }
